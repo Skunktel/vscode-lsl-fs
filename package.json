@@ -7,7 +7,7 @@
     "version": "0.1.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Skunktel/vscode-lsl-fs"
+        "url": "https://github.com/Skunktel/vscode-lsl-fs.git"
     },
     "icon":"package-image.png",
     "license": "GPLv3",
