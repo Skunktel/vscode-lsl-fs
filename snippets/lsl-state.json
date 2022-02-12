@@ -1,0 +1,29 @@
+{
+    "State-Change": {
+        "prefix": "statechange",
+        "body": [
+            "state $0;"
+        ],
+        "description": "State Change"
+    },
+    "State": {
+        "prefix": "state",
+        "body": [
+            "state ${name:name}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "State"
+    },
+    "Default": {
+        "prefix": "default",
+        "body": [
+            "default",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Default"
+    }
+}

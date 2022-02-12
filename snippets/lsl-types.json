@@ -1,0 +1,51 @@
+{
+    "Float Type": {
+        "prefix": "float",
+        "body": [
+            "float"
+        ],
+        "description": "Float Type"
+    },
+    "Integer Type": {
+        "prefix": "integer",
+        "body": [
+            "integer"
+        ],
+        "description": "Integer Type"
+    },
+    "Key Type": {
+        "prefix": "key",
+        "body": [
+            "key"
+        ],
+        "description": "Key Type"
+    },
+    "List Type": {
+        "prefix": "list",
+        "body": [
+            "list"
+        ],
+        "description": "List Type"
+    },
+    "Rotation Type": {
+        "prefix": "rotation",
+        "body": [
+            "rotation"
+        ],
+        "description": "Rotation Type"
+    },
+    "String Type": {
+        "prefix": "string Type",
+        "body": [
+            "string"
+        ],
+        "description": "String"
+    },
+    "Vector Type": {
+        "prefix": "vector",
+        "body": [
+            "vector"
+        ],
+        "description": "Vector Type"
+    }
+}

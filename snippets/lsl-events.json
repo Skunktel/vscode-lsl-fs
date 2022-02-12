@@ -1,0 +1,382 @@
+{
+    "attack Event": {
+        "prefix": "attach",
+        "body": [
+            "attach( key ${name:id} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered in an object when the object attaches or detaches from agent.\n• key id – the avatar if attached, if not attached NULL_KEY."
+    },
+    "at_rot_target Event": {
+        "prefix": "at_rot_target",
+        "body": [
+            "at_rot_target( integer ${name:handle}, rotation ${name:targetrot}, rotation ${name:ourrot} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Result of llRotTarget library function call\n• integer handle – llRotTarget return\n• rotation targetrot – llRotTarget rot parameter\n• rotation ourrot – current rotation (similar to llGetRot)"
+    },
+    "at_target Event": {
+        "prefix": "at_target",
+        "body": [
+            "at_target( integer ${name:tnum}, vector ${name:targetpos}, vector ${name:ourpos} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Result of llTarget library function call\n• integer tnum – llTarget return\n• vector targetpos – llTarget position parameter\n• vector ourpos – current position (similar to llGetPos)"
+    },
+    "changed Event": {
+        "prefix": "changed",
+        "body": [
+            "changed( integer ${name:change} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Various changes to the object/prim trigger this event.\n• integer change – bit field of CHANGED_* flags\nMultiple changes can be represented in a single event, so use bitwise arithmetic."
+    },
+    "collision Event": {
+        "prefix": "collision",
+        "body": [
+            "collision( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered while task is colliding with another task.\n• integer num_detected"
+    },
+    "collision_end Event": {
+        "prefix": "collision_end",
+        "body": [
+            "collision_end( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task stops colliding with another task\n• integer num_detected"
+    },
+    "collision_start Event": {
+        "prefix": "collision_start",
+        "body": [
+            "collision_start( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task starts colliding with another task\n• integer num_detected"
+    },
+    "control Event": {
+        "prefix": "control",
+        "body": [
+            "control( key ${name:id}, integer ${name:level}, integer ${name:edge} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Result of llTakeControls library function call and user input.\n• key id – avatar UUID\n• integer level – bitfield of CONTROL_* flags, non-zero while one or more keys is being held down.\n• integer edge – bitfield of CONTROL_* flags, non-zero when one or more keys have been just pressed or released."
+    },
+    "dataserver Event": {
+        "prefix": "dataserver",
+        "body": [
+            "dataserver( key ${name:queryid}, string ${name:data} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task receives asynchronous data\n• key queryid – matches the return of the requesting function\n• string data – the requested data (cast as a string as necessary)."
+    },
+    "email Event": {
+        "prefix": "email",
+        "body": [
+            "email( string ${name:time}, string ${name:address}, string ${name:subject}, string ${name:message}, integer ${num_left} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered as a result of calling llGetNextEmail where there is a matching email in the email queue.\n• string time – In the (string)llGetUnixTime format • string address\n• string subject\n• string message\n• integer num_left – The number of emails remaining in the email queue.\nThe email queue is associated with the prim and any script in the prim can access it.\nThe prim's email address is its key with \"@lsl.secondlife.com\" appended, llGetKey() + \"@lsl.secondlife.com\"."
+    },
+    "experience_permissions Event": {
+        "prefix": "experience_permissions",
+        "body": [
+            "experience_permissions( key ${name:agent_id} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "The agent has approved an experience permissions request. This may be through interaction with the experience permission dialog or the experience profile, or automatically if the agent has previously approved the experience.\n• key agent_id – avatar UUID approving permission"
+    },
+    "experience_permissions_denied Event": {
+        "prefix": "experience_permissions_denied",
+        "body": [
+            "experience_permissions_denied( key ${name:agent_id}, integer ${name:reason} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Event ID The agent has denied experience permission. \n• key agent_id – avatar UUID that denied permission. \n• integer reason – Reason for denial; one of the Experience Tools XP_ERROR_* errors flags.\nThis event may be generated in many cases:\n In response to a call to llRequestExperiencePermissions if any of the following is true:\n  The agent does not respond to the experience permission dialog. This will happen after a long delay if the agent is running a viewer which doesn't understand the request or if the agent has blocked the object.\n  The agent selects \"Block Experience\" in the experience permission dialog.\n  The agent has previously blocked the experience through another experience permission dialog or through the experience profile.\n  An attachment is asking for permission from an agent other than its owner.\n  The experience cannot run on the region because it is blocked or exceeds the maturity rating of the region.\n The experience can no longer run:\n  The script has moved to a region where the experience cannot run because it is blocked or it exceeds the maturity rating of the region.\n  The script has moved to a parcel where it is blocked or not allowed.\n  The agent has blocked the experience from the experience profile."
+    },
+    "http_request Event": {
+        "prefix": "http_request",
+        "body": [
+            "http_request( key ${name:request_id}, string ${name:method}, string ${name:body} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task receives an HTTP request.\n• key request_id – HTTP request id for response use, and function response identification.\n• string method – \"GET\", \"POST\", \"PUT\", \"DELETE\", URL_REQUEST_GRANTED, URL_REQUEST_DENIED\n• string body – Contents of the request."
+    },
+    "http_response Event": {
+        "prefix": "http_response",
+        "body": [
+            "http_response( key ${name:request_id}, integer ${name:status}, list ${name:metadata}, string ${name:body} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task receives a response to one of its llHTTPRequests\n• key request_id – Matches return from llHTTPRequest\n• integer status – HTTP status code (like 404 or 200)\n• list metadata – List of HTTP_* constants and attributes\n• string body"
+    },
+    "land_collision Event": {
+        "prefix": "land_collision",
+        "body": [
+            "land_collision( vector ${name:pos} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered in the root when physical object or attached avatar is colliding with land\n• vector pos – position of collision with the ground"
+    },
+    "land_collision_end Event": {
+        "prefix": "land_collision_end",
+        "body": [
+            "land_collision_end( vector ${name:pos} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered in the root when a physical object or attached avatar stops colliding with land\n• vector pos – position of last collision with the ground"
+    },
+    "land_collision_start Event": {
+        "prefix": "land_collision_start",
+        "body": [
+            "land_collision_start( vector ${name:pos} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered in the root when a physical object or attached avatar starts colliding with land\n• vector pos – position of collision with the ground"
+    },
+    "link_message Event": {
+        "prefix": "link_message",
+        "body": [
+            "link_message( integer ${name:sender_num}, integer ${name:num}, string ${name:str}, key ${name:id} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "29 Event ID Triggered when the script receives a link message that was sent by a call to llMessageLinked. llMessageLinked is used to send messages from one script to another.\n• integer sender_num – The link number of the prim that contained the script that called llMessageLinked.\n• integer num – Second parameter of the llMessageLinked call.\n• string str – The message that was sent from the script that called llMessageLinked.\n• key id – Fourth parameter of the llMessageLinked call.\nid is often used as a second string field (in LSL the key type is implemented as a string with just custom operators). Typecasting between string and key types has no effect on the data contained. The sizes of str and id are only limited by available script memory."
+    },
+    "listen Event": {
+        "prefix": "listen",
+        "body": [
+            "listen( integer ${name:channel}, string ${name:name}, key ${name:id}, string ${name:message} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered by chat, use llListen to enable and filter\n• integer channel – channel that the message appeared on.\n• string name – prim name or avatar Legacy Name\n• key id – group, avatar or prim UUID\n• string message – text spoken"
+    },
+    "money Event": {
+        "prefix": "money",
+        "body": [
+            "money( key ${name:id}, integer ${name:amount} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Security Warning!\n\nTriggered when money is paid to the prim in the amount by id.\n• key id – who paid\n• integer amount – the amount paid"
+    },
+    "moving_end Event": {
+        "prefix": "moving_end",
+        "body": [
+            "moving_end()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task stops moving"
+    },
+    "moving_start Event": {
+        "prefix": "moving_start",
+        "body": [
+            "moving_start()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task begins moving"
+    },
+    "not_at_rot_target Event": {
+        "prefix": "not_at_rot_target",
+        "body": [
+            "not_at_rot_target()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Result of llRotTarget library function call"
+    },
+    "not_at_target Event": {
+        "prefix": "not_at_target",
+        "body": [
+            "not_at_target()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered if an object has not yet reached the target set by the call to llTarget.\nThis event may be triggered multiple times if the target has not been reached."
+    },
+    "no_sensor Event": {
+        "prefix": "no_sensor",
+        "body": [
+            "no_sensor()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Result of a call to llSensor or llSensorRepeat."
+    },
+    "object_rez Event": {
+        "prefix": "object_rez",
+        "body": [
+            "object_rez( key ${name:id} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when the object rezzes an object.\n• key id – UUID of object rezzed."
+    },
+    "on_rez Event": {
+        "prefix": "on_rez",
+        "body": [
+            "on_rez( integer ${name:start_param})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when an object is rezzed (by script or by user). Also triggered in attachments when a user logs in, or when the object is attached from inventory.\n• integer start_param – parameter supplied to llRezObject or llRezAtRoot\nstart_param is always zero when an object is not rezzed by llRezObject or llRezAtRoot.\nWhen an object is rezzed by llRezObject or llRezAtRoot, then start_param will be the value given as the last parameter of the rezzing command.\nstart_param is available at any subsequent time by calling llGetStartParameter (unless it has been overridden by llRemoteLoadScriptPin)."
+    },
+    "path_update Event": {
+        "prefix": "path_update",
+        "body": [
+            "path_update( integer ${name:type}, list ${name:reserved} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Event description goes here.\n• integer type – A PU_*, it's the path event type\n• list reserved – Reserved; not currently used."
+    },
+    "remote_data Event": {
+        "prefix": "remote_data",
+        "body": [
+            "remote_data( integer ${name:event_type}, key ${name:channel}, key ${name:message_id}, string ${name:sender}, integer ${name:idata}, string ${name:sdata} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered by various XML-RPC calls.\n• integer event_type\n• key channel\n• key message_id\n• string sender\n• integer idata\n• string sdata"
+    },
+    "run_time_permissions Event": {
+        "prefix": "run_time_permissions",
+        "body": [
+            "run_time_permissions( integer ${name:perm} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when an agent grants run time permissions to this script.\n• integer perm – mask of PERMISSIONS_* flags granting permissions"
+    },
+    "sensor Event": {
+        "prefix": "sensor",
+        "body": [
+            "sensor( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Results from a call to either llSensor or llSensorRepeat.\n• integer num_detected – number of objects/avatars found\nThe results are ordered from nearest to furthest.\nnum_detected is always greater than zero, the no_sensor event is triggered if no objects/avatars were found."
+    },
+    "state_entry Event": {
+        "prefix": "state_entry",
+        "body": [
+            "state_entry()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered on any state transition and startup"
+    },
+    "state_exit Event": {
+        "prefix": "state_exit",
+        "body": [
+            "state_exit()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered on a qualifying state transition."
+    },
+    "timer Event": {
+        "prefix": "timer",
+        "body": [
+            "timer()",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Repeats the code in the timer(). Result of the llSetTimerEvent library function call."
+    },
+    "touch Event": {
+        "prefix": "touch",
+        "body": [
+            "touch( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered whilst an agent is clicking the task. It will continue to be triggered until the the prim/object is stopped being clicked (it triggers multiple times). Triggered on touch start, each minimum event delay while held, and touch end.\n• integer num_detected"
+    },
+    "touch_end Event": {
+        "prefix": "touch_end",
+        "body": [
+            "touch_end( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when agent stops clicking on task\n• integer num_detected"
+    },
+    "touch_start Event": {
+        "prefix": "touch_start",
+        "body": [
+            "touch_start( integer ${name:num_detected} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered by the start of agent clicking on task\b• integer num_detected – Number of agents detected touching during the last clock cycle"
+    },
+    "transaction_result Event": {
+        "prefix": "transaction_result",
+        "body": [
+            "transaction_result( key ${name:id}, integer ${name:success} , string ${name:data} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Triggered when task receives asynchronous data\n• key id – matches the return of the llTransfer* function\n• integer success – TRUE if the transfer succeeded otherwise FALSE.\n• string data – On successful transactions this will contain a CSV of information pertaining to the transaction. In failure, a string will be returned matching one of the error tags below."
+    }
+}

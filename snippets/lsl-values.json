@@ -1,0 +1,16 @@
+{
+    "Rotation Value": {
+        "prefix": "rv",
+        "body": [
+            "<${name:x}, ${name:y}, ${name:z}, ${name:w}>"
+        ],
+        "description": "Rotation Value"
+    },
+    "Vector Value": {
+        "prefix": "vv",
+        "body": [
+            "<${name:x}, ${name:y}, ${name:z}>"
+        ],
+        "description": "Vector Value"
+    }
+}

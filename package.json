@@ -1,0 +1,77 @@
+{
+    "$schema": "https://json.schemastore.org/package",
+    "name": "lsl-fs",
+    "displayName": "LSL Firestorm",
+    "description": "Basic syntax and snippets for LSL",
+    "publisher": "Skunktel",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Skunktel/vscode-lsl-fs"
+    },
+    "icon":"package-image.png",
+    "license": "GPLv3",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "lsl",
+                "aliases": [
+                    "LSL",
+                    "lsl"
+                ],
+                "extensions": [
+                    ".lsl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "lsl",
+                "scopeName": "source.lsl",
+                "path": "./syntaxes/lsl.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-constants.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-events.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-flow.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-FS.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-functions.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-state.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-types.json"
+            },
+            {
+                "language": "lsl",
+                "path": "./snippets/lsl-values.json"
+            }
+        ]
+    }
+}

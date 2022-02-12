@@ -1,0 +1,78 @@
+{
+    "Jump": {
+        "prefix": "jump",
+        "body": [
+            "jump $0;"
+        ],
+        "description": "Jump"
+    },
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (${name:initial}; ${name:compare}; ${name:increase})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "For Loop"
+    },
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${name:compare})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "While Loop"
+    },
+    "Do-While Loop": {
+        "prefix": "dowhile",
+        "body": [
+            "do",
+            "{",
+            "\t$0",
+            "}",
+            "while (${name:compare})"
+        ],
+        "description": "Do-While Loop"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if (${name:compare})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "If Statement"
+    },
+    "If-Else Statement": {
+        "prefix": "ifelse",
+        "body": [
+            "if (${name:compare})",
+            "{",
+            "\t$0",
+            "}",
+            "else",
+            "{",
+            "\t",
+            "}"
+        ],
+        "description": "If-Else Statement"
+    },
+    "Label": {
+        "prefix": "label",
+        "body": [
+            "@$0;"
+        ],
+        "description": "Label"
+    },
+    "Return": {
+        "prefix": "return",
+        "body": [
+            "return $0;"
+        ],
+        "description": "Return"
+    }
+}

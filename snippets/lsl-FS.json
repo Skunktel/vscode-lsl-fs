@@ -1,0 +1,267 @@
+{
+    "Pragma Onse": {
+        "prefix": "pragma once",
+        "body": [
+            "#ifndef ${name:FILE_INDENTIFIER}",
+            "#define ${name:FILE_INDENTIFIER}",
+            "",
+            "",
+            "$0",
+            "",
+            "",
+            "#endif // ${name:FILE_INDENTIFIER}",
+            ""
+        ],
+        "description": "pragma once implement"
+    },
+
+    "Float Casting Preprocessor": {
+        "prefix": "float()",
+        "body": [
+            "float(${name:value}$0)"
+        ],
+        "description": "Float Casting Preprocessor"
+    },
+    "Integer Casting Preprocessor": {
+        "prefix": "integer()",
+        "body": [
+            "integer(${name:value}$0)"
+        ],
+        "description": "Integer Casting Preprocessor"
+    },
+    "Key Casting Preprocessor": {
+        "prefix": "key()",
+        "body": [
+            "key(${name:value}$0)"
+        ],
+        "description": "Key Casting Preprocessor"
+    },
+    "List Casting Preprocessor": {
+        "prefix": "list()",
+        "body": [
+            "list(${name:value}$0)"
+        ],
+        "description": "List Casting Preprocessor"
+    },
+    "Rotation Casting Preprocessor": {
+        "prefix": "rotation()",
+        "body": [
+            "rotation(${name:value}$0)"
+        ],
+        "description": "Rotation Casting Preprocessor"
+    },
+    "String Casting Preprocessor": {
+        "prefix": "string()",
+        "body": [
+            "string(${name:value}$0)"
+        ],
+        "description": "String Casting Preprocessor"
+    },
+    "Vector Casting Preprocessor": {
+        "prefix": "vector()",
+        "body": [
+            "vector(${name:value}$0)"
+        ],
+        "description": "Vector Casting Preprocessor"
+    },
+    
+    "Define USE_LAZY_LISTS Preprocessor": {
+        "prefix": "#define USE_LAZY_LISTS",
+        "body": [
+            "#define USE_LAZY_LISTS",
+            "$0"
+        ],
+        "description": "Define USE_LAZY_LISTS Preprocessor"
+    },
+    "Define USE_SWITCHES Preprocessor": {
+        "prefix": "#define USE_SWITCHES",
+        "body": [
+            "#define USE_SWITCHES",
+            "$0"
+        ],
+        "description": "Define USE_SWITCHES Preprocessor"
+    },
+
+
+
+    "Define Preprocessor": {
+        "prefix": "#define",
+        "body": [
+            "#define ${name:identifier}",
+            "$0"
+        ],
+        "description": "Define Preprocessor"
+    },
+    "Undef Preprocessor": {
+        "prefix": "#undef",
+        "body": [
+            "#undef ${name:identifier}",
+            "$0"
+        ],
+        "description": "Undef Preprocessor"
+    },
+    "Ifdef Preprocessor": {
+        "prefix": "#ifdef",
+        "body": [
+            "#ifdef ${name:identifier}",
+            "$0"
+        ],
+        "description": "Ifdef Preprocessor"
+    },
+    "Ifndef Preprocessor": {
+        "prefix": "#ifndef",
+        "body": [
+            "#ifndef ${name:identifier}",
+            "$0"
+        ],
+        "description": "Ifndef Preprocessor"
+    },
+    "If Preprocessor": {
+        "prefix": "#if",
+        "body": [
+            "#if ${name:constant-expression}",
+            "$0"
+        ],
+        "description": "If Preprocessor"
+    },
+    "Elif Preprocessor": {
+        "prefix": "#elif",
+        "body": [
+            "#elif ${name:constant-expression}",
+            "$0"
+        ],
+        "description": "Elif Preprocessor"
+    },
+    "Else Preprocessor": {
+        "prefix": "#else",
+        "body": [
+            "#else",
+            "$0"
+        ],
+        "description": "Else Preprocessor"
+    },
+    "Endif Preprocessor": {
+        "prefix": "#endif",
+        "body": [
+            "#endif",
+            "$0"
+        ],
+        "description": "Endif Preprocessor"
+    },
+    "Warning Preprocessor": {
+        "prefix": "#warning",
+        "body": [
+            "#warning ${name:warningtoken-string}",
+            "$0"
+        ],
+        "description": "Warning Preprocessor"
+    },
+    "Error Preprocessor": {
+        "prefix": "#error",
+        "body": [
+            "#error ${name:errortoken-string}",
+            "$0"
+        ],
+        "description": "Error Preprocessor"
+    },
+    "Include Preprocessor": {
+        "prefix": "#include",
+        "body": [
+            "#include \"${name:path-spec}\"",
+            "$0"
+        ],
+        "description": "Include Preprocessor"
+    },
+
+
+    
+    "__FILE__ Preprocessor": {
+        "prefix": "__FILE__",
+        "body": [
+            "__FILE__$0"
+        ],
+        "description": "the full path to the script as it would appear in the include cache. The top script only uses its name."
+    },
+    "__LINE__ Preprocessor": {
+        "prefix": "__LINE__",
+        "body": [
+            "__LINE__$0"
+        ],
+        "description": "the line of the current script where it is expanded; this starts at line 0"
+    },
+    "__SHORTFILE__ Preprocessor": {
+        "prefix": "__SHORTFILE__",
+        "body": [
+            "__SHORTFILE__$0"
+        ],
+        "description": "the name of the current script without full file path"
+    },
+    "__AGENTID__ Preprocessor": {
+        "prefix": "__AGENTID__",
+        "body": [
+            "__AGENTID__$0"
+        ],
+        "description": "a string-encapsulated version of the agent's key who compiles the script"
+    },
+    "__AGENTKEY__ Preprocessor": {
+        "prefix": "__AGENTKEY__",
+        "body": [
+            "__AGENTKEY__$0"
+        ],
+        "description": "same as above, legacy version"
+    },
+    "__AGENTIDRAW__ Preprocessor": {
+        "prefix": "__AGENTIDRAW__",
+        "body": [
+            "__AGENTIDRAW__$0"
+        ],
+        "description": "a nonstring-encapsulated version of the agent's key who compiles the script"
+    },
+    "__AGENTNAME__ Preprocessor": {
+        "prefix": "__AGENTNAME__",
+        "body": [
+            "__AGENTNAME__$0"
+        ],
+        "description": "a string-encapsulated version of the agent's full name who compiles the script"
+    },
+    "__ASSETID__ Preprocessor": {
+        "prefix": "__AGENTNAME__",
+        "body": [
+            "__AGENTNAME__$0"
+        ],
+        "description": "a string-encapsulated version of the assetid of the current script; may return “NOT IN WORLD” or a nonstring-encapsulated null key in rare circumstances"
+    },
+
+    "Switch Statement": {
+        "prefix": "switch",
+        "body": [
+            "switch (${name:value})",
+            "{",
+            "\tcase (${name:case}):",
+            "\t{",
+            "\t\t$0",
+            "\t\tbreak;",
+            "\t}",
+            "\tdefault:",
+            "\t{",
+            "\t\tbreak;",
+            "\t}",
+            "}"
+        ],
+        "description": "Switch Statement"
+    },
+    "Continue": {
+        "prefix": "continue",
+        "body": [
+            "continue;"
+        ],
+        "description": "Continue"
+    },
+    "Break": {
+        "prefix": "break",
+        "body": [
+            "break;"
+        ],
+        "description": "Break"
+    }
+}
