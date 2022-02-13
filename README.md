@@ -8,6 +8,8 @@ Makes use of [Makopo's Sublime Syntax](https://github.com/Makopo/sublime-text-ls
 
 Updates and reworks snippets used in [LSL-FP](https://marketplace.visualstudio.com/itemdetails?itemName=DalGhost.lsl-fp).
 
+![LSL-FS Preview](./preview.png "Preview")
+
 ## Release Notes
 
 Initial release.
