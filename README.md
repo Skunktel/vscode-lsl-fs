@@ -12,6 +12,10 @@ Updates and reworks snippets used in [LSL-FP](https://marketplace.visualstudio.c
 
 Initial release.
 
+## Future plans
+
+Create a proper Language Server Protocol for LSL to properly implement intellisense.
+
 ## Patch Notes
 
 ### 0.1.0
