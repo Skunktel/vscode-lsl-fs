@@ -3219,5 +3219,82 @@
            "llTargetedEmail(${name:target}, ${name:subject}, ${name:message});$0"
         ],
         "description": "llTargetedEmail( integer target, string subject, string message );\n\n119 Function ID\n20.0 Forced Delay\n10.0 Energy\n\nSends an email to the owner or creator (selected by target) of an object with subject and message.\n• integer target\n• string subject\n• string message\nThe entire message (including the address, subject and other miscellaneous fields) can't be longer than 4096 bytes combined.\n"
+    },
+    "llLinksetDataAvailable": {
+        "prefix": "llLinksetDataAvailable",
+        "body": [
+           "llLinksetDataAvailable();$0"
+        ],
+        "description": "The llLinksetDataAvailable returns the number of bytes available in the linkset's datastore.\nReturns an integer number of bytes available in the linkset store."
+    },
+    "llLinksetDataCountKeys": {
+        "prefix": "llLinksetDataCountKeys",
+        "body": [
+           "llLinksetDataCountKeys();$0"
+        ],
+        "description": "The llLinksetDataCountKeys returns the number of unique keys that have been stored in the linkset's datastore.\nReturns an integer number of keys used in the linkset store."
+    },
+    "llLinksetDataDelete": {
+        "prefix": "llLinksetDataDelete",
+        "body": [
+           "llLinksetDataDelete(${name:name});$0"
+        ],
+        "description": "The llLinksetDataDelete and llLinksetDataDeleteProtected functions erases a name:value pair from the linkset's datastore. \n When this function successfully removes a name:value pair a linkset_data event is triggered in all scripts running in the linkset with an action of LINKSETDATA_DELETE and the name parameter set to the name that was removed.\n The value parameter in the event is set to an empty string."
+    },
+    "llLinksetDataDeleteProtected": {
+        "prefix": "llLinksetDataDeleteProtected",
+        "body": [
+           "llLinksetDataDeleteProtected(${name:name, ${name:pass});$0"
+        ],
+        "description": "The llLinksetDataDeleteProtected function erases a protected name:value pair from the linkset's datastore.\nReturns an integer success or failure code. \n string name The key of the linkset name:value pair to be deleted.The key of the linkset name:value pair to be deleted. \n string pass A pass phrase previously used to protect the name:value pair."
+    },
+    "llLinksetDataFindKeys": {
+        "prefix": "llLinksetDataFindKeys",
+        "body": [
+           "llLinksetDataFindKeys(${name:pattern}, ${name:start}, ${name:count});$0"
+        ],
+        "description": "list llLinksetDataFindKeys( string pattern, integer start, integer count ); \n\n The llLinksetDataListKeys function returns a list of up to count keys from the datastore that match pattern, starting at the one indicated by start.\nIf count is less than 1, then all keys between start and the end which match pattern are returned.\nReturns a list of the keys in the datastore.\n string pattern A regular expression describing which keys to return. \ninteger start The first key to return. \ninteger count The number of keys to return. \npattern is a Regular expression"
+    },
+    "llLinksetDataListKeys": {
+        "prefix": "llLinksetDataListKeys",
+        "body": [
+           "llLinksetDataListKeys(${name:start}, ${name:count});$0"
+        ],
+        "description": "list llLinksetDataListKeys( integer start, integer count ); \n\n The llLinksetDataListKeys function returns a list of up to count keys in the datastore, starting at the one indicated by start. If count is less than 1, then all keys between start and the end are returned. Returns a list of the keys in the datastore. \n integer start The first key to return. \n integer count The number of keys to return."
+    },
+    "llLinksetDataRead": {
+        "prefix": "llLinksetDataRead",
+        "body": [
+           "llLinksetDataRead(${name:start});$0"
+        ],
+        "description": "list llLinksetDataRead( string start ) The llLinksetDataRead and llLinksetDataReadProtected functions return the value in the linkset's datastore for the provided name. \nIf name is not found, these functions return an empty string. Reads an unprotected name:value pair from the linkset's datastore.\nReturns a string value corresponding to name\n string name – The key of the linkset name:value pair to be read. \nIf the name is missing, or the name:value pair was created with llLinksetDataWriteProtected this function returns an empty string. "
+    },
+    "llLinksetDataReadProtected": {
+        "prefix": "llLinksetDataReadProtected",
+        "body": [
+           "llLinksetDataReadProtected(${name:start}, ${name:pass});$0"
+        ],
+        "description": "list llLinksetDataReadProtected(string start, string pass); The llLinksetDataReadProtected and llLinksetDataReadProtected functions return the value in the linkset's datastore for the provided name. \nIf name is not found, these functions return an empty string. Reads a protected name:value pair from the datastore. \nReturns a string value corresponding to name\n string name – The key of the linkset name:value pair to be read.The key of the name:value pair to be read. \n string pass The pass phrase protecting the name:value pair. \n If the pass parameter does not match, this function returns an empty string. "
+    },
+    "llLinksetDataReset": {
+        "prefix": "llLinksetDataReset",
+        "body": [
+           "llLinksetDataReset();$0"
+        ],
+        "description": "llLinksetDataReset( ); \n\n The llLinksetDataReset function erases all name:value pairs from the linkset's datastore. \n When this function successfully removes all name:value pairs a linkset_data event is triggered in all scripts running in the linkset with an action of LINKSETDATA_RESET and the name parameter set to an empty string. \n The value parameter in the event is set to an empty string."
+    },
+    "llLinksetDataWrite": {
+        "prefix": "llLinksetDataWrite",
+        "body": [
+           "llLinksetDataWrite(${name:name}, ${name:value});$0"
+        ],
+        "description": "integer llLinksetDataWrite( string name, string value ); \n\n The llLinksetDataWrite and llLinksetDataWriteProtected functions create or update a name:value pair in the linkset datastore. If value is an empty string, the pair is deleted. \nThis function returns 0 on success or an error code on failure. \nWhen these function are called the linkset_data event is triggered in all scripts running in the linkset with an action of LINKSETDATA_UPDATE, or LINKSETDATA_DELETE if the pair is deleted. \nThe linkset datastore can contain up to 64k of data. Every pair written to the datastore consumes a number of bytes in the datastore equal to the length of name plus the length of value. \n Creates or updates an unprotected name:value pair from the linkset's datastore. \n Returns an integer success or failure code. \n string name – The key of the name:value pair in the datastore to be updated or created.\n string value - The value of the name:value pair. "
+    },
+    "llLinksetDataWriteProtected": {
+        "prefix": "llLinksetDataWriteProtected",
+        "body": [
+           "llLinksetDataWriteProtected(${name:name}, ${name:value}, ${name:pass});$0"
+        ],
+        "description": "integer llLinksetDataWriteProtected( string name, string value, string pass ); \n\n Creates or updates an protected name:value pair from the linkset's datastore. Further attempts to read, write or update the name:value pair must use the protected versions of those functions and must supply the same string that was used in pass.\nReturns an integer success or failure code.\n string name – The key of the name:value pair in the datastore to be updated or created. The key of the name:value pair in the datastore to be updated or created. \n string value - The value of the name:value pair.The value of the name:value pair. \n string pass - A pass phrase used to protect the name:value pair. \nCaveats \n Protecting a name:value pair adds an additional 32 bytes to its size in the datastore. \n When writing a protected name, the linkset_data event fires as normal, however the value parameter will be an empty string. \n LINKSETDATA_OK - 0 - The name:value pair was written to the datastore. \n LINKSETDATA_EMEMORY - 1 - A name:value pair was too large to write to the linkset datastore. \n LINKSETDATA_ENOKEY 2 The name supplied to llLinksetDataWrite was empty. \n LINKSETDATA_EPROTECTED - 3 - The name:value pair has been protected from overwrite in the linkset's datastore. \n LINKSETDATA_NOTFOUND - 4 - The named key could not be found in the linkset's datastore when attempting to delete it. \n LINKSETDATA_NOUPDATE - 5 - The name:value stored in the linkset was not changed by the write operation because the value stored matches the value written. \n\n Events are only fired if the linkset's datastore is changed. \n Rewriting an existing value to a name:value pair returns LINKSETDATA_NOUPDATE. \n Writing an empty string to a nonexistent name in the datastore returns LINKSETDATA_NOTFOUND."
     }
 }

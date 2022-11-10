@@ -378,5 +378,15 @@
             "}"
         ],
         "description": "Triggered when task receives asynchronous data\n• key id – matches the return of the llTransfer* function\n• integer success – TRUE if the transfer succeeded otherwise FALSE.\n• string data – On successful transactions this will contain a CSV of information pertaining to the transaction. In failure, a string will be returned matching one of the error tags below."
+    },
+    "linkset_data Event": {
+        "prefix": "linkset_data",
+        "body": [
+            "linkset_data( integer ${name:action}, string ${name:name} , string ${name:value} )",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "The linkset_data event fires in all scripts in a linkset whenever the datastore has been modified through a call to one of the llLinksetData functions."
     }
 }
