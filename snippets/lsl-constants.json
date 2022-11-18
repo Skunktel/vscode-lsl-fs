@@ -4866,5 +4866,47 @@
            "SERVICE_ERROR$0"
         ],
         "description": "There was an error connecting to the back-end service"
+    },
+    "LINKSETDATA_OK": {
+        "prefix": "LINKSETDATA_OK",
+        "body": [
+           "LINKSETDATA_OK$0"
+        ],
+        "description": "The name:value pair was written to the datastore."
+    },
+    "LINKSETDATA_EMEMORY": {
+        "prefix": "LINKSETDATA_EMEMORY",
+        "body": [
+           "LINKSETDATA_EMEMORY$0"
+        ],
+        "description": "A name:value pair was too large to write to the linkset datastore."
+    },
+    "LINKSETDATA_ENOKEY": {
+        "prefix": "LINKSETDATA_ENOKEY",
+        "body": [
+           "LINKSETDATA_ENOKEY$0"
+        ],
+        "description": "The name supplied to llLinksetDataWrite was empty."
+    },
+    "LINKSETDATA_EPROTECTED": {
+        "prefix": "LINKSETDATA_EPROTECTED",
+        "body": [
+           "LINKSETDATA_EPROTECTED$0"
+        ],
+        "description": "The name:value pair has been protected from overwrite in the linkset's datastore."
+    },
+    "LINKSETDATA_NOTFOUND": {
+        "prefix": "LINKSETDATA_NOTFOUND",
+        "body": [
+           "LINKSETDATA_NOTFOUND$0"
+        ],
+        "description": "The named key could not be found in the linkset's datastore when attempting to delete it."
+    },
+    "LINKSETDATA_NOUPDATE": {
+        "prefix": "LINKSETDATA_NOUPDATE",
+        "body": [
+           "LINKSETDATA_NOUPDATE$0"
+        ],
+        "description": "The name:value stored in the linkset was not changed by the write operation because the value stored matches the value written."
     }
 }
