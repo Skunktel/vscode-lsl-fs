@@ -1347,7 +1347,7 @@
     "llList2Json": {
         "prefix": "llList2Json",
         "body": [
-           "llList2Json(${name:type}, ${2|JSON_INVALID,JSON_OBJECT,JSON_ARRAY|}$0)"
+           "llList2Json(${2|JSON_INVALID,JSON_OBJECT,JSON_ARRAY|}, ${name:list}$0)"
         ],
         "description": "string llList2Json( string type, list values );\n\n ? Function ID\n 0.0 Forced Delay\n  Energy\n\nThis function takes a list and returns a JSON string of that list as either a json object or json array.Returns a string that is either values serialized as a JSON type, or if an error was encountered JSON_INVALID.\n• string type\n• list values\nTo convert a json formatted string into a list use llJson2List.\n"
     },
